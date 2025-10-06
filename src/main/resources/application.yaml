@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: workstation-platform-backend
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/workstation_db
+    username: myuser
+    password: mysecretpassword
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
